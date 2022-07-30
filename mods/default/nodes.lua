@@ -130,6 +130,7 @@ default:stone_with_mese
 default:mese
 
 default:stone_with_diamond
+default:sandstone_diamond_ore
 default:diamondblock
 
 Plantlife
@@ -1302,6 +1303,16 @@ minetest.register_node("default:stone_with_diamond", {
 	drop = "default:diamond",
 	sounds = default.node_sound_stone_defaults(),
 })
+
+
+minetest.register_node("default:sandstone_diamond_ore", {
+        description = S("Sandstone Diamond Ore"),
+	tiles = {"default_sandstone.png^default_mineral_diamond.png"},
+	groups = {cracky = 1},
+	drop = "default:diamond 18",
+	sounds = default.node_sound_stone_defaults(),
+}}
+
 
 minetest.register_node("default:diamondblock", {
 	description = S("Diamond Block"),
