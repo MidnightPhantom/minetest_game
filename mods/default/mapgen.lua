@@ -542,7 +542,7 @@ function default.register_ores()
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
 		y_max           = 31000,
-		y_min           = -31000,
+		y_min           = -30000,
 		noise_threshold = 0.0,
 		noise_params    = {
 			offset = 0.5,
@@ -563,7 +563,7 @@ function default.register_ores()
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
 		y_max           = 31000,
-		y_min           = -31,
+		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
 			offset = 0.5,
@@ -574,9 +574,9 @@ function default.register_ores()
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"taiga", "snowy_grassland", "grassland", "coniferous_forest",
-				"deciduous_forest", "deciduous_forest_shore", "rainforest",
-				"rainforest_swamp"}
+		biomes = {"taiga", "taiga_under", "icesheet_under", "tundra_under", "snowy_grassland_under", "snowy_grassland", "grassland", "grassland_under", 
+				"coniferous_forest", "coniferous_forest_under","deciduous_forest", "deciduous_forest_under", "deciduous_forest_shore", "rainforest",
+				"rainforest_under", "rainforest_swamp", "desert_under", "savanna_under", "cold_desert_under", "sandstone_desert_under"}
 	})
 
 	-- Gravel
@@ -588,7 +588,7 @@ function default.register_ores()
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
 		y_max           = 31000,
-		y_min           = -31000,
+		y_min           = -30000,
 		noise_threshold = 0.0,
 		noise_params    = {
 			offset = 0.5,
@@ -634,7 +634,7 @@ function default.register_ores()
 		clust_num_ores = 30,
 		clust_size     = 5,
 		y_max          = -128,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Tin
@@ -669,7 +669,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -128,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Copper
@@ -704,7 +704,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -128,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Iron
@@ -739,7 +739,7 @@ function default.register_ores()
 		clust_num_ores = 29,
 		clust_size     = 5,
 		y_max          = -256,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Gold
@@ -774,7 +774,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -512,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Mese crystal
@@ -809,11 +809,22 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -1024,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Diamond
-
+        
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:sandstone_diamond_ore",
+		wherein        = "default:sandstone",
+		clust_scarcity = 20 * 20 * 20,
+		clust_num_ores = 10,
+		clust_size     = 4,
+	        y_max          = 300,
+	        y_min          = -250,
+        })
+	
 	minetest.register_ore({
 		ore_type       = "scatter",
 		ore            = "default:stone_with_diamond",
@@ -844,7 +855,7 @@ function default.register_ores()
 		clust_num_ores = 4,
 		clust_size     = 3,
 		y_max          = -2048,
-		y_min          = -31000,
+		y_min          = -30000,
 	})
 
 	-- Mese block
@@ -879,7 +890,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -4096,
-		y_min          = -31000,
+		y_min          = -3000,
 	})
 end
 
